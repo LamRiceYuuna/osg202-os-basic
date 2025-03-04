@@ -1,0 +1,6 @@
+ echo -n "Enter k ="
+ read k 
+ if ((k<10))
+  then
+ echo "$k < 10"
+  fi

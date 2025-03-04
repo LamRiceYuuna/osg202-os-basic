@@ -1,0 +1,8 @@
+echo -n "Enter n = "
+read n 
+ i=0
+while((i<=n))
+ do 
+  ((i++))
+  echo "Hello $i"
+  done

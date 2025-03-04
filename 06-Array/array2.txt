@@ -1,0 +1,24 @@
+a=(7 2 9 4 5)
+#b=(hoa la canh cay)
+b=${a[*]}
+n=${#a[*]}
+for ((i=0;i<n;i++))
+ do
+  if ((a[[j]<a[i]))
+   then
+    ((x=a[i]))
+    ((a[i]=a[j]))
+    ((a[j]=x))
+  fi
+ done
+done
+echo "Before sorting: "
+for ((i=0;i<n;i++))
+ do
+  echo -n "${b[i]} "
+done
+echo "After sorting: "
+for ((i=0;i<n;i++))
+ do
+  echo -n "${a[i]} "
+done

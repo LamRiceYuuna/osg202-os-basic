@@ -1,0 +1,32 @@
+isPrime() {
+ n=$1
+ isPrime1=0
+if ((n==1))
+ then
+  isPrime1=0
+ elif ((n==2))
+  then
+   isPrime1=1
+ else
+  isPrime1=1
+ for((i=2;i<n;i++))
+  do
+   if((n%i==0))
+    then
+      isPrime1=0
+       break
+     fi
+    done
+fi
+echo $isPrime1
+}
+#================================
+echo -n "Enter k = "
+read k 
+r=$(isPrime $k)
+if ((r==1))
+ then
+  echo "$k is prime"
+ else
+  echo "$k is not prime"
+fi

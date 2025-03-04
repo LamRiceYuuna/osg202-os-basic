@@ -1,0 +1,8 @@
+echo -n "Enter n = "
+read n
+s=0
+for((i=1;i<=n;i++))
+ do 
+  ((s+=i))
+  done
+  echo "1+2+...+$n = $s"

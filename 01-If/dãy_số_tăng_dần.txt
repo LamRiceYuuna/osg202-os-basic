@@ -1,0 +1,25 @@
+ echo -n "Enter a, b, c ="
+ read a b c 
+ echo "$a, $b, $c"
+ if ((b<a))
+  then
+    x=$a
+    a=$b
+    b=$x
+ 
+  fi
+ if ((c<a))
+  then
+    x=$a
+    a=$c
+    c=$x
+ 
+  fi
+ if ((c<b))
+  then
+    x=$b
+    b=$c
+    c=$x
+ 
+  fi
+  echo "$a, $b, $c"

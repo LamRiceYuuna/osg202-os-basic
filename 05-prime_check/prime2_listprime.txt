@@ -1,0 +1,44 @@
+isPrime() {
+ n=$1
+ local isPrime1=0
+ if ((n==1))
+  then
+   isPrime1=0
+   elif ((n==2))
+    then
+     isPrime1=1
+    else
+    isPrime1=1
+    for ((i=2;i<n;i++))
+     do
+      if ((n%i==0))
+       then
+        isPrime1=0
+        break
+      fi
+     done
+ fi
+ echo $isPrime1
+}
+#==================
+listPrimes() {
+ a=$1
+ b=$2
+ if ((a>=b))
+   then
+    echo "a must be less than b"
+   return
+ fi
+for ((i=a;i<=b;i++))
+ do
+  k=$(isPrime $i)
+  if ((k==1))
+  then
+   echo -n "$i "
+  fi
+ done
+}
+#====================
+echo -n "Enter a b = "
+read a1 b1
+listPrimes $a1 $b1

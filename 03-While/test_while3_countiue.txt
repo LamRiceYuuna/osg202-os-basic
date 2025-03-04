@@ -1,0 +1,12 @@
+echo -n "Enter n = "
+read n 
+ i=0
+while((i<=n))
+ do 
+  ((i++))
+  if ((i==3))
+  then
+   countinue
+  fi
+  echo "Hello $i"
+ done

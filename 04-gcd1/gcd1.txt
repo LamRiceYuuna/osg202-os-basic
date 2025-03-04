@@ -1,0 +1,18 @@
+echo -n "Enter m n = "
+read m n
+m1=$m
+n1=$n
+if ((m<n))
+ then
+ x=$m
+ m=$n
+ n=$x
+fi
+while ((n>0))
+ do
+  ((k=m%n))
+  m=$n
+  n=$k
+done
+echo "gcd($m1,$n1) = $m"
+  
